@@ -30,7 +30,7 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t krishdocker1711/git_action_dockerk_img:latest .
+          docker build -t krishdocker1711/git_action_github_repo:latest .
 
       - name: Log in to Docker Hub
         env:
@@ -41,4 +41,4 @@ jobs:
 
       - name: Push Docker image to Docker Hub
         run: |
-          docker push krishdocker1711/git_action_dockerk_img:latest
+          docker push krishdocker1711/git_action_github_repo:latest
