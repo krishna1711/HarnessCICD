@@ -1,6 +1,5 @@
 # Use the official Python image from the Docker Hub
-FROM ubuntu:20.4
-
+FROM ubuntu:20.04
 # Set the working directory in the container
 WORKDIR /app
 
