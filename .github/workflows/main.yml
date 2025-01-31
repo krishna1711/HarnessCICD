@@ -42,3 +42,10 @@ jobs:
       - name: Push Docker image to Docker Hub
         run: |
           docker push krishdocker1711/git_action_github_repo:latest
+  deploy:
+  stage: deploy
+  script:
+    - docker pull krishdocker1711/git_action_github_repo:latest
+    - docker stop github_containerk || true
+    - docker rm github_containerk || true
+    - docker run -d --name github_containerk -p 80:80 krishdocker1711/git_action_github_repo:latest
